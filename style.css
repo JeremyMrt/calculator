@@ -104,19 +104,31 @@ footer {
 }
 
 
-@media all and (max-width: 800px) {
+/* @media all and (max-width: 800px) {
 
 .screen {
     width: 175px;
     height: 50px;
+    font-size: 0.9rem;
+}
+
+.last-display {
+    font-size: 0.6rem;
 }
 
 .buttons {
     width: 175px;
+    
+}
+
+button {
+    font-size: 1.1rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 footer {
     font-size: 0.5rem;
 }
 
-}
+} */
