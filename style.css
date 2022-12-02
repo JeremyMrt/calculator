@@ -102,3 +102,21 @@ footer {
     position : absolute;
     bottom: 0;
 }
+
+
+@media all and (max-width: 800px) {
+
+.screen {
+    width: 175px;
+    height: 50px;
+}
+
+.buttons {
+    width: 175px;
+}
+
+footer {
+    font-size: 0.5rem;
+}
+
+}
