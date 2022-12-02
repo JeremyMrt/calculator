@@ -6,6 +6,10 @@ const equal = document.querySelector('#equal')
 const currentDisplay = document.querySelector(".current-display");
 const lastDisplay = document.querySelector(".last-display");
 
+let firstValue
+let secondValue
+let operatorSign
+let result
 
 
 numbers.forEach((number) => {
@@ -21,11 +25,18 @@ clear.addEventListener("click", (e)=> {
 
 operators.forEach((operator)=> {
     operator.addEventListener('click', (e)=> {
-        lastDisplay.textContent = currentDisplay.textContent + " " + operator.id ;
-        let firstValue = currentDisplay.textContent ; 
-        
-        
+        lastDisplay.textContent = currentDisplay.textContent + " " + operator.textContent ;
+        firstValue = currentDisplay.textContent ;
+        operatorSign = operator.id;
+        currentDisplay.textContent="";  
     })
+})
+
+equal.addEventListener('click', (e)=> {
+    secondValue = currentDisplay.textContent ;
+    result = operate(firstValue, operatorSign, secondValue)
+    currentDisplay.textContent = result;
+    console.log(result)
 })
 
 
@@ -36,10 +47,10 @@ function multiply(a,b){return a * b}
 function divide(a,b){return a / b}
 
 function operate(a, operator, b){
+    a = Number(a);
+    b = Number(b);
     if (operator === '+'){return add(a,b)}
     else if (operator === '-'){return substract(a,b)}
     else if (operator === '*'){return multiply(a,b)}
-    else if (operator === '/'){return divide(a,b)}
+    else if (operator === '÷'){return divide(a,b)}
 }
-
-// Other functions
