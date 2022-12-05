@@ -1,108 +1,112 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    height: 100vh;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
 }
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #94b49f;
-    padding: 25px;
-    margin: 0 auto;
-    border-radius: 12px;
-    border: 2px solid black;
-    box-shadow: 10px 10px 5px #76549a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #94b49f;
+  padding: 25px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 2px solid black;
+  box-shadow: 10px 10px 5px #76549a;
 }
 
 .screen {
-    background-color: #fcf8e8;
-    width: 350px;
-    height: 100px;
-    border: 2px solid black;
-    border-radius: 6px;
-    padding: 8px 15px ;
-    font-size: 1.8rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
+  background-color: #fcf8e8;
+  width: 350px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 2.5rem;
+  font-size-adjust: inherit;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .last-display {
-    font-weight: 100;
-    font-style: italic;
-    font-size: 1.3rem;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 1.6rem;
 }
 
 .current-display,
 .last-display {
-    display: flex;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 button {
-    font-size: 1.8rem;
-    height: 4rem;
-    width: auto;
-    cursor: pointer;
-    border: 2px solid black;
-    border-radius: 6px;
+  font-size: 1.8rem;
+  height: 4rem;
+  width: auto;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 6px;
 }
 
 button:hover {
-    filter: brightness(150%);
+  filter: brightness(110%);
 }
 
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-        "clear clear cancel cancel"
-        "number number number operator" ;
-    grid-gap: 0.5rem;
-    margin-top : 1rem;
-    width : 350px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "clear clear cancel cancel"
+    "number number number operator";
+  grid-gap: 0.5rem;
+  margin-top: 1rem;
+  width: 350px;
 }
 
 #clear {
-    grid-area: clear;
-    width: auto;
-    background-color: #df7861;
-    color: #fcf8e8;
+  grid-area: clear;
+  width: auto;
+  background-color: #df7861;
+  color: #fcf8e8;
 }
 
 #cancel {
-    grid-area: cancel;
-    width: auto;
-    background-color: #df7861;
-    color: #fcf8e8;
+  grid-area: cancel;
+  width: auto;
+  background-color: #df7861;
+  color: #fcf8e8;
 }
 
 .operator {
-    background-color: #76549a;
-    color :#fcf8e8;
+  background-color: #76549a;
+  color: #fcf8e8;
 }
 
 .number,
-#equal {
-    background-color: #fcf8e8;
+#equal,
+.point {
+  background-color: #fcf8e8;
+  color: black;
 }
-
-
 
 footer {
-    position : absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
+  font-weight: 100;
+  font-style: italic;
+  color: #76549a;
 }
-
 
 /* @media all and (max-width: 800px) {
 
